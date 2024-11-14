@@ -107,4 +107,54 @@ quantile(D)
 min(D)
 max(D)
 
-Test 
+# Lists
+F <- list(1:5, "a", c(TRUE, FALSE), seq(0.2, 0.8, by= 0.2))
+typeof(F)
+F
+
+G <- list(
+  integer_vector = 1:6,
+  character_vector = "a"
+)
+G
+G$integer_vector
+G[[1]]
+
+# Data Frames: Used when dealing with tabular data
+
+df <- data.frame(c = 1:10, d = letters[1:10])
+df
+
+# Useful Commands
+View(df)      # Opens df in spreadsheet
+summary(df)   # Summary statistics for each variable
+df$c          # Access variable with name c
+head(df)      # Shows first 6 rows of df
+tail(df)      # Shows last 6 rows of df
+nrow(df)      # Shows number of rows of df
+ncol(df)
+names(df)     # Shows column names of df
+
+# Creating a new column
+df$e <- seq(0.1, 1, by = 0.1)
+df
+
+# Select multiple columns by name
+df[ ,c("c", "e")]
+
+# Select a subset of observations based on a condition
+
+df[df$c <= 5,]
+
+# Importing Data Sets
+
+df <- read.csv("Ordner/Ordner2/Datei.csv")
+
+
+
+
+
+
+
+
+
